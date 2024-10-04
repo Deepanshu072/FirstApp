@@ -17,7 +17,7 @@ jobs:
           CI: false        
         run: npm run build
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3   # Updated version
         with:
           name: build
           path: build
@@ -27,9 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Already updated
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3   # Updated version
         with:
           name: build
           path: build
